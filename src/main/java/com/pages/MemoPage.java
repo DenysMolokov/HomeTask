@@ -11,9 +11,9 @@ import java.util.List;
 
 public class MemoPage extends BasePage {
 
-    private String MemoPageUrl= "https://www.ss.com/lv/favorites/";
+    private String MemoPageUrl= "https://www.ss.com/lv/favorites/fDgTeF4S.html";
 
-    @FindBy( linkText = "Memo")
+    @FindBy( xpath = "//div[@class=\"filter_second_line_dv\"]/a[1]")
     private WebElement memoTabLink ;
 
     @FindBy(xpath = "//div[@class=\"filter_second_line_dv\"]//a[@class=\"a9a\"]")

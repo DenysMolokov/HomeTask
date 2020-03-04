@@ -51,6 +51,7 @@ public class AddAdFromSearchPageStep extends BasePage {
     @When("^User gets to Memo page from Search Result Page")
     public void userGetsToMemoPage() throws InterruptedException {
         memoPage.clickOnElement(memoPage.getMemoPageLink());
+        memoPage.clickOnElement(memoPage.getMemoTabLink());
         //Verify user is on Memo page
         memoPage.compareElements(
                 memoPage.getMemoPageUrl(),

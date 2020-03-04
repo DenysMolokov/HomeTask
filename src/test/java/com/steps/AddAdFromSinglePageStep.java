@@ -72,6 +72,7 @@ public class AddAdFromSinglePageStep extends BasePage {
     @When("^User gets to Memo page")
     public void userGetsToMemoPage() throws InterruptedException {
         memoPage.clickOnElement(memoPage.getMemoPageLink());
+        memoPage.clickOnElement(memoPage.getMemoTabLink());
         //Verify user is on Memo page
         memoPage.compareElements(
                 memoPage.getMemoPageUrl(),
@@ -80,7 +81,7 @@ public class AddAdFromSinglePageStep extends BasePage {
     }
 
     @Then("^Verify ad is added to Memo Page$")
-    public void verifyAdIsAddedToMemoPage() {
+    public void verifyAdIsAddedToMemoPage() throws InterruptedException {
         memoPage.compareTwoLists(
                 memoPage.getProductInMemoLinks(),
                 productPage.getListOfProducts()
