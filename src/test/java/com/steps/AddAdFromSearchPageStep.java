@@ -14,6 +14,7 @@ public class AddAdFromSearchPageStep extends BasePage {
     @Then("^User gets to Search page")
     public void userGetsToSearchPage() throws InterruptedException {
         searchPage.clickOnElement(searchPage.getSearchPageLink());
+        Thread.sleep(2000);
         // VerifyUserIsOnSearchPage
         searchPage.compareContainsElements(
                 searchPage.getPageUrlActual(),
