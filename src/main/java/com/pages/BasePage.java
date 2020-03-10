@@ -26,15 +26,15 @@ public class BasePage extends Base {
     }
 
     public void compareElements (String act, String exp){
-        Assert.assertEquals(act, exp);
         System.out.println("Expected : " + act);
         System.out.println("Actual : " + exp);
+        Assert.assertEquals(act, exp);
     }
 
     public void compareContainsElements (String act, String exp){
-        Assert.assertTrue(act.contains(exp));
         System.out.println("Expected : " + act);
         System.out.println("Actual : " + exp);
+        Assert.assertTrue(act.contains(exp));
     }
 
     public String getPageTitleFromUrl(){
