@@ -20,7 +20,7 @@ public class SingleProductPage extends BasePage {
     }
 
     public String getSingleProductPageText (){
-          return singleProductPageText.getText().substring(0,25);
+          return singleProductPageText.getText().replaceAll("\n"," ").substring(0,25);
     }
 
     public WebElement getAddToMemoLink (){
