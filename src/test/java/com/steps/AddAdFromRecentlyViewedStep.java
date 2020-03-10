@@ -23,11 +23,13 @@ public class AddAdFromRecentlyViewedStep extends BasePage {
         productPage.clickOnElement(productPage.getSingleProductLink());
         singleProductPage.clickOnElement(singleProductPage.getBackToProductListLink());
         productPage.clickOnElement(productPage.getSingleProductLinkOneMoreTime());
+        Thread.sleep(2000);
     }
 
     @When("^User gets to Recently Viewed Tab on Memo Page")
     public void userGetsToMemoPage() throws InterruptedException {
         memoPage.clickOnElement(memoPage.getMemoPageLink());
+        memoPage.clickOnElement(memoPage.getMemoTabLink());
         //Verify user is on Memo page
         memoPage.compareElements(
                 memoPage.getMemoPageUrl(),
